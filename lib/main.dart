@@ -1,43 +1,63 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MisIconosApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class MisIconosApp extends StatelessWidget {
+  const MisIconosApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Miguel Dominguez"),
+          titleTextStyle: TextStyle(color: Colors.black, fontSize: 20),
+          centerTitle: true,
+          backgroundColor: Color(0xff71d3ff),
+        ),
+        body: Column(
+          children: <Widget>[
+            Text("Miguel angel dominguez lopez \n 22308051281173",
+                style: TextStyle(
+                    fontSize: 25,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.black)),
+            SizedBox(
+              height: 100,
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                SizedBox(
+                  height: 100,
+                ),
+                Icon(
+                  Icons.shopping_bag,
+                  color: Colors.pink,
+                  size: 24.0,
+                  semanticLabel: 'Text to announce in accessibility modes',
+                ),
+                Icon(
+                  Icons.audiotrack,
+                  color: Colors.green,
+                  size: 30.0,
+                ),
+                Icon(
+                  Icons.beach_access,
+                  color: Colors.blue,
+                  size: 36.0,
+                ),
+                Icon(
+                  Icons.access_alarm,
+                  color: Color(0xff000000),
+                  size: 36.0,
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
-  }
-}
+  } //finwiggets
+} // fin de clase mis iconos
